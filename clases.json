@@ -1,0 +1,25 @@
+ticket {
+    "filmName" : "string",
+    "roomNumber" : "int",
+    "location" : "string",
+    "position" : "string",
+    "date" : "string",
+    "value" : "int"
+}
+
+schedule {
+    "filmName" : "string",
+    "roomNumber" : "int",
+    "location" : "string",
+    "position" : "string",
+    "date" : "string"
+}
+
+films {
+    
+    "filesImages" : ["string"],
+    "filmNames" : "string",
+    "genre" : "string",
+    "description" : "string",
+    "fileTrailer" : ["string"]
+}
