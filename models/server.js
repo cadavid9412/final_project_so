@@ -2,14 +2,16 @@ const express = require('express');
 const cors = require('cors');
 
 
+
 class Server{
 
     constructor(){
-        this.app = express()
+        this.app = express();
         this.port = process.env.PORT;
         
         //ruta general
         this.ticketsPath = '/api/tickets'
+
 
         //middlewares
         this.middlewares();
@@ -30,6 +32,7 @@ class Server{
     }
     routes() {
         this.app.use( this.ticketsPath, require('../routes/tickets'));
+        
     }
 
 
