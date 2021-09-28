@@ -18,7 +18,7 @@ const ticketGet = (req = request, res = response) => {
 
 const ticketPost = (req, res = response) => {
 
-    const { nombre, edad } = req.body;
+    const { filmName,roomNumber,location,position,date,value } = req.body;
 
     res.json({
         msg: 'post API - ticketPost',
@@ -33,7 +33,7 @@ const ticketPost = (req, res = response) => {
 
 const ticketPut = (req, res = response) => {
 
-    const { id } = req.params;
+    const { filmName,roomNumber,location,position,date,value } = req.params;
 
     res.json({
         msg: 'put API - ticketPut',
@@ -46,14 +46,11 @@ const ticketPut = (req, res = response) => {
     });
 }
 
-
 const ticketDelete = (req, res = response) => {
     res.json({
         msg: 'delete API - ticketDelete'
     });
 }
-
-
 
 
 module.exports = {
