@@ -5,6 +5,8 @@ class server{
     constructor(){
         this.app = express()
         this.port = process.env.PORT;
+        
+        //ruta general
         this.ticketsPath = '/api/tickets'
 
         //middlewares
@@ -27,6 +29,7 @@ class server{
     routes() {
         this.app.use( this.ticketsPath, require('../routes/tickets'));
     }
+
 
     listen() {
         this.app.listen( this.port, () => {
