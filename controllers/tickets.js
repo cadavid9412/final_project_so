@@ -1,12 +1,28 @@
 const { response, request } = require('express');
 
 
-const ticketsGet = (req = request, res = response) => {
+const ticketGet = (req = request, res = response) => {
 
     const { id,filmName,roomNumber,location,position,date,value} = req.query;
 
     res.json({
         msg: 'get API - controlador',
+
+        id,
+        filmName,
+        roomNumber,
+        location,
+        position,
+        date,
+        value
+    });
+}
+const ticketPost = (req, res = response) => {
+
+    const {id, filmName,roomNumber,location,position,date,value } = req.body;
+
+    res.json({
+        msg: 'post API - ticketPost',
         id,
         filmName,
         roomNumber,
@@ -17,12 +33,12 @@ const ticketsGet = (req = request, res = response) => {
     });
 }
 
-const ticketsPost = (req = request, res = response) => {
+const ticketPut = (req, res = response) => {
 
-    const { id,filmName,roomNumber,location,position,date,value} = req.query;
+    const { filmName,roomNumber,location,position,date,value } = req.params;
 
     res.json({
-        msg: 'post API - controlador',
+        msg: 'put API - ticketPut',
         id,
         filmName,
         roomNumber,
@@ -30,40 +46,19 @@ const ticketsPost = (req = request, res = response) => {
         position,
         date,
         value
-        
     });
 }
 
-const ticketsPut = (req = request, res = response) => {
-
-    const { id,filmName,roomNumber,location,position,date,value } = req.query;
-
+const ticketDelete = (req, res = response) => {
     res.json({
-        msg: 'put API - controlador',
-        id,
-        filmName,
-        roomNumber,
-        location,
-        position,
-        date,
-        value
-        
+        msg: 'delete API - ticketDelete'
     });
 }
 
-const ticketsDelete = (req = request, res = response) => {
-
-    const { id } = req.query;
-
-    res.json({
-        msg: 'delete API - controlador',
-        
-    });
-}
 
 module.exports = {
-    ticketsGet,
-    ticketsPost,
-    ticketsPut,
-    ticketsDelete
+    ticketGet,
+    ticketPost,
+    ticketPut,
+    ticketDelete
 }

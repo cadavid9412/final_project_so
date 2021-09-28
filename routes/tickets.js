@@ -1,21 +1,19 @@
 const {Router} = require('express');
 
-const{
-    ticketsGet,
-    ticketsPut,
-    ticketsPost,
-    ticketsDelete
-} = require('../controllers/tickets')
+const { 
+    ticketGet,
+    ticketPut,
+    ticketPost,
+    ticketDelete } = require('../controllers/tickets');
 
 const router = Router();
 
+router.get('/', ticketGet );
 
-router.get('/', tickectsGet );
+router.put('/:id', ticketPut );
 
-router.put('/:id', tickectsPut );
+router.post('/', ticketPost );
 
-router.post('/', tickectsPost );
+router.delete('/', ticketDelete );
 
-router.delete('/', tickectsDelete );
-
-modules.exports = router;
+module.exports = router;
