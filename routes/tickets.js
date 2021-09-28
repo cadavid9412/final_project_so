@@ -17,4 +17,4 @@ router.post('/', ticketPost );
 router.delete('/', ticketDelete );
 
 
-modules.exports = router;
+module.exports = router;

@@ -60,6 +60,5 @@ module.exports = {
     ticketGet,
     ticketPost,
     ticketPut,
-    ticketPatch,
-    ticketDelete,
+    ticketDelete
 }
