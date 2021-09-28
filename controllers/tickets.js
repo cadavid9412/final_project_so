@@ -3,10 +3,11 @@ const { response, request } = require('express');
 
 const ticketGet = (req = request, res = response) => {
 
-    const { filmName,roomNumber,location,position,date,value } = req.query;
+    const {id,filmName,roomNumber,location,position,date,value } = req.query;
 
     res.json({
         msg: 'get API - ticket get',
+        id,
         filmName,
         roomNumber,
         location,
@@ -18,10 +19,11 @@ const ticketGet = (req = request, res = response) => {
 
 const ticketPost = (req, res = response) => {
 
-    const { filmName,roomNumber,location,position,date,value } = req.body;
+    const {id, filmName,roomNumber,location,position,date,value } = req.body;
 
     res.json({
         msg: 'post API - ticketPost',
+        id,
         filmName,
         roomNumber,
         location,
@@ -37,6 +39,7 @@ const ticketPut = (req, res = response) => {
 
     res.json({
         msg: 'put API - ticketPut',
+        id,
         filmName,
         roomNumber,
         location,
